@@ -1,4 +1,10 @@
-import { createAction } from '@ngrx/store';
+import {createAction, props} from '@ngrx/store';
 
-export const increment = createAction('[Volume] Increment');
-export const decrement = createAction('[Volume] Decrement');
+const prefix = '[Volume]';
+
+export const increment = createAction(`${prefix} Increment`);
+export const decrement = createAction(`${prefix} Decrement`);
+
+export const equalizerChange = createAction(`${prefix} Equalizer change`,
+  props<{ setting: 'bass' | 'middle' | 'treble',
+    change: 'increment' | 'decrement'}>());

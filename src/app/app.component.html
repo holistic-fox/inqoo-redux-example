@@ -1,6 +1,15 @@
 <div>
-  <button>Increase</button>
-  <label for="volume">Volume</label>
-  <input id="volume">
-  <button>Decrease</button>
+  <button (click)="volumeDecrease()">-</button>
+  <span>Volume: {{ volume | async}}</span>
+  <button (click)="volumeIncrease()">+</button>
+</div>
+
+<div>
+  <button (click)="bassDecrease()">-</button>
+  <span>Bass: {{ bass | async}}</span>
+  <button (click)="bassIncrease()">+</button>
+</div>
+
+<div>
+  <app-equalizer-view></app-equalizer-view>
 </div>

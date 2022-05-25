@@ -6,10 +6,12 @@ import {StoreModule} from "@ngrx/store";
 import {inqooReducer} from "./store/inqoo-reducer";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {storeName} from "./store/inqoo-state";
+import { EqualizerViewComponent } from './components/equalizer-view/equalizer-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EqualizerViewComponent
   ],
   imports: [
     BrowserModule,
